@@ -1,0 +1,48 @@
+Heaps are type of trees that are used to maintain the priority order of elements based on certain criteria.
+
+There are 2 types of heaps 
+1.Min Heaps
+2.Max Heaps
+
+1.Min Heaps: In this type, priority is give to smallest number i.e root will always have smallest element possible than it's 
+             children as this pattern is followed throughout the tree as a result, leaves will have largest element possible.
+
+2.Max Heaps: In this type, priority is given to largest element possible i.e root will have largest element possible than it's 
+             children. This pattern is followed all over the tree such that leaves will have smallest number possible.
+
+
+Building of heaps
+
+Building heaps takes O(log n) time, where n is number of nodes.
+
+
+stl c++
+
+make_heap(): this make heaps
+            make_heap(v1.begin(), v1.end());
+            tc: O(log n);
+
+push_heap(): re-arranges into heap after pushing into array
+            v.push_back(5);
+            push_heap(v.begin(),v.end());
+            time complexity: O(log n);
+
+pop_heap(): takes max element (in case of max heap) to last index to remove it safely without distrupting heap;
+            tc: O(log n);
+            pop_heap(v.begin(),v.end())
+
+sort_heap(): sorts heap into ascending order 
+            tc: O(n log n);
+
+
+is_heap(): gives true or false weather it is a heap or not till the given range
+            tc: O(log n);
+            is_heap(v.begin(),v.begin()+n);
+
+is_heap_until(): gives a iterator till where it is heap
+                tc: O(log n)
+                auto it =  is_heap_until(v.begin(),v.end());
+
+
+
+
